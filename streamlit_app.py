@@ -69,7 +69,7 @@ fornecedores = {
 # SELEÇÃO 
 st.subheader("Selecione o tipo de aço para ver os detalhes do fornecedor:")
 opcao = st.selectbox("Escolha um tipo de aço:", list(fornecedores.keys()))
-
+st.write(fornecedores.keys())
 if opcao:
     dados = fornecedores[opcao]
     st.markdown(f"""
@@ -93,3 +93,4 @@ if opcao:
     with col2:
         if st.button("❌ Não, obrigado.", key="nao"):
             st.info("Tudo bem! Você pode escolher outro tipo de aço acima 😊")
+
